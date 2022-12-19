@@ -43,7 +43,7 @@ async function create(req, res) {
     const transaction = await db.transaction();
     try {
 
-        const data = JSON.parse(req.body);
+        const data = req.body;
         await unitDao.create(data, transaction)
 
         await transaction.commit();
@@ -59,7 +59,7 @@ async function update(req, res) {
     const transaction = await db.transaction();
     try {
 
-        const data = JSON.parse(req.body);
+        const data = req.body;
 
         await unitDao.update({
             unitName: data.unitName,
@@ -94,12 +94,22 @@ async function destroy(req, res) {
 async function convert(req, res) {
     try {
 
-        const data = JSON.parse(req.body);
+        //     const {
+        //         fromUnitID,
+        //         fromUnitQty,
+        //         toUnitID
+        //     } = req.body;
 
-       /*convert logic
-        
-       */
+        //   const fromUnit = await unitDao.getByID(fromUnitID);
+        //   const toUnit = await unitDao.getByID(toUnitID);
+        //   const toUnitValue = fromUnit.unitValue;
 
+        //     return res.status(200).send({
+        //         fromUnitID,
+        //         fromUnitQty,
+        //         toUnitID,
+        //         toUnitValue
+        //     });
         return res.status(200).send();
     } catch (e) {
         console.error(e);

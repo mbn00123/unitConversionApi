@@ -42,7 +42,7 @@ async function create(req, res) {
     const transaction = await db.transaction();
     try {
 
-        const data = JSON.parse(req.body);
+        const data = req.body
         await contextDao.create(data, transaction)
 
         await transaction.commit();
@@ -58,7 +58,7 @@ async function update(req, res) {
     const transaction = await db.transaction();
     try {
 
-        const data = JSON.parse(req.body);
+        const data = req.body
 
         await contextDao.update({
             contextName: data.contextName,
