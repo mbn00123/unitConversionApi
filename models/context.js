@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
        
         contextName: DataTypes.STRING(50),
         countryID: DataTypes.STRING(2),   
-        unitId: DataTypes.INTEGER,
+        unitID: DataTypes.INTEGER,
         metricID: DataTypes.INTEGER,
 
         customMetricName: DataTypes.STRING(50),
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     model.associate = models => {
-        model.belongsTo(models.unit, { foreignKey: 'unitID'});
+        model.belongsTo(models.Unit, { foreignKey: 'unitID'});
         model.belongsTo(models.Metric, { foreignKey: 'metricID'});
     }
 

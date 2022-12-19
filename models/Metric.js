@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     model.associate = models => {
-        model.belongsTo(models.unit, { foreignKey: 'unitID'});
+        model.belongsTo(models.Unit, { foreignKey: 'unitID'});
     }
 
     return model;

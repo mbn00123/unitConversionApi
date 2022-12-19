@@ -17,7 +17,7 @@ create table Context(
 	contextId int AUTO_INCREMENT PRIMARY key,
 	contextName varchar(50),
 	countryID varchar(2),
-	unitId int,
+	unitID int,
 	metricID int,
 	customMetricName varchar(50),
 	customMetricValue decimal(18,2),

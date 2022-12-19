@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         },
        
         unitName: DataTypes.STRING(50),      
-        unitValue: DataTypes.Decimal(18, 2)
+        unitValue: DataTypes.DECIMAL(18, 2)
     });
 
     return model;
