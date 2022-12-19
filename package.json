@@ -1,0 +1,33 @@
+{
+  "name": "unitconversionapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbn00123/unitConversionApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbn00123/unitConversionApi/issues"
+  },
+  "homepage": "https://github.com/mbn00123/unitConversionApi#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "config": "^3.3.8",
+    "cors": "^2.8.5",
+    "express": "^4.15.1",
+    "express-fileupload": "^0.1.2",
+    "express-validator": "^3.1.2",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.11",
+    "sequelize": "^6.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
