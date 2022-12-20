@@ -47,7 +47,7 @@ async function create(req, res) {
         await unitDao.create(data, transaction)
 
         await transaction.commit();
-        return res.status(201).send(true);
+        return res.status(201).send();
     } catch (e) {
         console.error(e);
         await transaction.rollback();
@@ -78,7 +78,6 @@ async function update(req, res) {
 async function destroy(req, res) {
     const transaction = await db.transaction();
     try {
-
         const id = req.params.id;
         await unitDao.destroy(id, transaction)
 

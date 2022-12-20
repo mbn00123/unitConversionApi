@@ -61,3 +61,8 @@ app.use("/", require("./route"));
 app.get("/", function (req, res) {
   res.send("Hello API");
 });
+
+module.exports = {
+  app,
+  server,
+};

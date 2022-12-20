@@ -1,27 +1,27 @@
 create table Unit(
-	unitId int AUTO_INCREMENT PRIMARY key,
+	unitID int AUTO_INCREMENT PRIMARY key,
 	unitName varchar(50),
-	unitValue decimal(18,2)
+	unitValue decimal(18,10)
 );
 
 create table Metric(
 	metricID int AUTO_INCREMENT PRIMARY key,
 	metricName varchar(50),
-	metricValue decimal(18,2),
+	metricValue decimal(18,10),
 	
-	unitId int,
-	FOREIGN KEY (unitId) REFERENCES Unit(unitId)
+	unitID int,
+	FOREIGN KEY (unitID) REFERENCES Unit(unitID)
 );
 
 create table Context(
-	contextId int AUTO_INCREMENT PRIMARY key,
+	contextID int AUTO_INCREMENT PRIMARY key,
 	contextName varchar(50),
 	countryID varchar(2),
 	unitID int,
 	metricID int,
 	customMetricName varchar(50),
-	customMetricValue decimal(18,2),
+	customMetricValue decimal(18,10),
 	
-	FOREIGN KEY (unitId) REFERENCES Unit(unitId),
+	FOREIGN KEY (unitID) REFERENCES Unit(unitID),
 	FOREIGN KEY (metricID) REFERENCES Metric(metricID)
 );

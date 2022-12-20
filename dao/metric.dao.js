@@ -13,7 +13,7 @@ async function gets() {
     try {
         const results = await models.Metric.findAll({
             order: [
-                ['unitName', 'asc']
+                ['metricName', 'asc']
             ],
         });
         return results;
@@ -43,7 +43,7 @@ async function update(data, id, transaction) {
     try {
         await models.Metric.update(data, {
             where: {
-                metricId: {
+                metricID: {
                     $eq: id
                 }
             }, transaction
@@ -55,9 +55,9 @@ async function update(data, id, transaction) {
 
 async function destroy(id, transaction) {
     try {
-        await models.Metric.destroy(id, {
+        await models.Metric.destroy({
             where: {
-                metricId: {
+                metricID: {
                     $eq: id
                 }
             }, transaction

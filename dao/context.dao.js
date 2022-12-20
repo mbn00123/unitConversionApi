@@ -13,7 +13,7 @@ async function gets() {
     try {
         const results = await models.Context.findAll({
             order: [
-                ['unitName', 'asc']
+                ['contextName', 'asc']
             ],
         });
         return results;
@@ -43,7 +43,7 @@ async function update(data, id, transaction) {
     try {
         await models.Context.update(data, {
             where: {
-                metricId: {
+                metricID: {
                     $eq: id
                 }
             }, transaction
@@ -55,9 +55,9 @@ async function update(data, id, transaction) {
 
 async function destroy(id, transaction) {
     try {
-        await models.Context.destroy(id, {
+        await models.Context.destroy({
             where: {
-                metricId: {
+                contextID: {
                     $eq: id
                 }
             }, transaction

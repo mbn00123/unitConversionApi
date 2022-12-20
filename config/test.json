@@ -1,0 +1,17 @@
+{
+    "mysql": {
+      "host": "127.0.0.1",
+      "user": "root",
+      "password": "P@ssw0rd",
+      "database": "unit_conversion_db"
+    },
+    "test":{
+        "username": "root",
+        "password": "P@ssw0rd",
+        "database": "unit_conversion_db",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "dialect": "mysql"
+    }
+  }
+  

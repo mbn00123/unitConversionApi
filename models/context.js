@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const model = sequelize.define("Context", {
 
-        ContextId: {
+        ContextID: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         metricID: DataTypes.INTEGER,
 
         customMetricName: DataTypes.STRING(50),
-        customMetricValue: DataTypes.DECIMAL(18, 2),
+        customMetricValue: DataTypes.DECIMAL(18, 10),
     });
 
     model.associate = models => {

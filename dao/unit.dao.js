@@ -55,7 +55,7 @@ async function update(data, id, transaction) {
 
 async function destroy(id, transaction) {
     try {
-        await models.Unit.destroy(id, {
+        await models.Unit.destroy({
             where: {
                 unitID: {
                     $eq: id
