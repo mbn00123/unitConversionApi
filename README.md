@@ -7,10 +7,15 @@ depending on users’ regions and their preferences.
 ## Language
 Nodejs with Express.js
 ## Database
-MySQL
+MySQL with Sequelize
+## Testing tool
+Chai & Mocha
 
 # Project Structure
 - **services** - use for create controller to receive request from client
 - **dao** - use for manage database by using Sequelize library
 - **modals** - use for define table structure as a model
 - **config** - use for config any static value such as database connection
+- **migrations** - use for initial database
+- **seeders** - use for inititial data for testing
+- **test** - use for create all unit tests
