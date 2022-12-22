@@ -15,8 +15,6 @@ router.route("/units")
 router.route("/units/:id")
     .get(unitSvc.getByID)
     .delete(unitSvc.destroy);
-router.route("/units/convert")
-    .post(unitSvc.convert);
 
 //Metric
 router.route("/metrics")
@@ -26,6 +24,8 @@ router.route("/metrics")
 router.route("/metrics/:id")
     .get(metricSvc.getByID)
     .delete(metricSvc.destroy);
+    router.route("/metrics/convert")
+        .post(metricSvc.convert);
 
 //Context
 router.route("/contexts")

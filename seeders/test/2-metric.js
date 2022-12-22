@@ -26,6 +26,12 @@ module.exports = {
             metricName: 'm/s',
             metricValue: 0.44704,
             unitID: 4 //mph
+          },
+          {
+            metricID: 5,
+            metricName: 'km/s',
+            metricValue: 0.000447,
+            unitID: 4 //mph
           }
         ],
         {}

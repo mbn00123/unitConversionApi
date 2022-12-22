@@ -24,7 +24,14 @@ async function gets() {
 
 async function getByID(id) {
     try {
-        const results = await models.Metric.findByPk(id);
+        const results = await models.Metric.findOne({
+            where: {
+                metricID:{
+                    $eq: id
+                }
+            },
+            include:[models.Unit]
+        });
         return results;
     } catch (error) {
         throw error;

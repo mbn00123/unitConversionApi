@@ -8,8 +8,7 @@ module.exports = {
     getByID,
     create,
     update,
-    destroy,
-    convert
+    destroy
 }
 
 async function gets(req, res) {
@@ -86,32 +85,6 @@ async function destroy(req, res) {
     } catch (e) {
         console.error(e);
         await transaction.rollback();
-        return res.status(500).send(e.message);
-    }
-}
-
-async function convert(req, res) {
-    try {
-
-        //     const {
-        //         fromUnitID,
-        //         fromUnitQty,
-        //         toUnitID
-        //     } = req.body;
-
-        //   const fromUnit = await unitDao.getByID(fromUnitID);
-        //   const toUnit = await unitDao.getByID(toUnitID);
-        //   const toUnitValue = fromUnit.unitValue;
-
-        //     return res.status(200).send({
-        //         fromUnitID,
-        //         fromUnitQty,
-        //         toUnitID,
-        //         toUnitValue
-        //     });
-        return res.status(200).send();
-    } catch (e) {
-        console.error(e);
         return res.status(500).send(e.message);
     }
 }
