@@ -19,3 +19,7 @@ Chai & Mocha
 - **migrations** - use for initial database
 - **seeders** - use for inititial data for testing
 - **test** - use for create all unit tests
+
+
+# Assignment 2 
+- /documents/ArchitechtureDesign.jpg
