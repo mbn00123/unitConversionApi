@@ -23,12 +23,12 @@ describe('CRUD metric test', async () => {
     });
 
       it("Create new metric", async() => {
-        const newUnit = {
+        const newData = {
             metricName: 'Rai',
             metricValue: 2.529,
             unitID: 1
         };
-        let { status } = await request(server).post('/metrics').send(newUnit);
+        let { status } = await request(server).post('/metrics').send(newData);
         expect(status).to.equal(201);
 
         const res = await request(server).get('/metrics/5');
@@ -42,13 +42,13 @@ describe('CRUD metric test', async () => {
       });
 
       it("Update metric:Rai", async() => {
-        const updateUnit = {
+        const updateData = {
             metricID: 5,
             metricName: 'Rai (ไร่)',
             metricValue: 2.529,
             unitID: 1
         };
-        let { status } = await request(server).put('/metrics').send(updateUnit);
+        let { status } = await request(server).put('/metrics').send(updateData);
         expect(status).to.equal(200);
 
         const res = await request(server).get('/metrics/5');

@@ -43,7 +43,7 @@ async function update(data, id, transaction) {
     try {
         await models.Context.update(data, {
             where: {
-                metricID: {
+                contextID: {
                     $eq: id
                 }
             }, transaction

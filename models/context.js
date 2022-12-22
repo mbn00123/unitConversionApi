@@ -1,14 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const model = sequelize.define("Context", {
 
-        ContextID: {
+        contextID: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
        
         contextName: DataTypes.STRING(50),
-        countryID: DataTypes.STRING(2),   
         unitID: DataTypes.INTEGER,
         metricID: DataTypes.INTEGER,
 

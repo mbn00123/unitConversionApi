@@ -29,6 +29,11 @@ router.route("/metrics/:id")
 
 //Context
 router.route("/contexts")
-    .post(metricSvc.create);
+    .get(contextSvc.gets)
+    .post(contextSvc.create)
+    .put(contextSvc.update);
+router.route("/contexts/:id")
+    .get(contextSvc.getByID)
+    .delete(contextSvc.destroy);
 
 module.exports = router;

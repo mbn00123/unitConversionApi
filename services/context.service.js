@@ -62,7 +62,6 @@ async function update(req, res) {
 
         await contextDao.update({
             contextName: data.contextName,
-            countryID: data.countryID,
             unitID: data.unitID,
             metricID: data.metricID,
             customMetricName: data.customMetricName,

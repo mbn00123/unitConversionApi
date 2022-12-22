@@ -16,7 +16,6 @@ create table Metric(
 create table Context(
 	contextID int AUTO_INCREMENT PRIMARY key,
 	contextName varchar(50),
-	countryID varchar(2),
 	unitID int,
 	metricID int,
 	customMetricName varchar(50),
